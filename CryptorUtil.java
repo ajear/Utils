@@ -161,41 +161,4 @@ public class CryptorUtil {
 		return getHash2MD5(pwd).equalsIgnoreCase(md5);
 	}
 	
-	public static void main(String[] args) throws Exception {
-		JFrame f = new JFrame("LoL");
-        f.setSize(400, 300);
-        f.setLocation(200, 200);
- 
-        f.setLayout(new FlowLayout());
- 
-        JLabel lName = new JLabel("账号：");
-        // 输入框
-        JTextField tfName = new JTextField("");
-        tfName.setText("请输入账号");
-        tfName.setPreferredSize(new Dimension(80, 30));
- 
-        JLabel lPassword = new JLabel("密码：");
-        // 输入框
-        JTextField tfPassword = new JTextField("");
-        tfPassword.setText("请输入密码");
-        tfPassword.setPreferredSize(new Dimension(80, 30));
-        
-        Button button=new Button("sub");
-        button.setBounds(50, 50, 280, 30);
-        
-        f.add(lName);
-        f.add(tfName);
-        f.add(lPassword);
-        f.add(tfPassword);
-        f.add(button);
- 
-        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
- 
-        f.setVisible(true);
-        
-		String str1="";
-		
-		System.out.println(enAes("123456",getKey(str1.getBytes())));
-		System.out.println(deAes(enAes("123456",getKey(str1.getBytes())), getKey(str1.getBytes())));
-	}
 }
